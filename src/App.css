@@ -1,38 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-image: url('./images/pattern-background-mobile.svg');
+  background-repeat: no-repeat;
+  background-color: hsl(225, 100%, 94%);
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  color: hsl(224, 23%, 55%);
+  font-family: 'Red Hat Display', sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+.order-summary {
+  background-color: #FFF;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 50%;
+  margin: 5% 0;
+  width: 90%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.order-summary img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 100%;
+}
+
+.order-summary h1 {
+  color: hsl(223, 47%, 23%);
+  font-weight: 900;
+  font-size: 1.5rem;
+  margin: 8% 0 0 0;
+}
+
+.order-summary p {
+  font-size: 0.88rem;
+  text-align: center;
+  width: 80%;
+}
+
+.yearly-plan {
+  background-color: hsl(225, 100%, 98%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5% 0;
+  padding: 5%;
+  width: 80%;
+}
+
+.yearly-plan img {
+  height: 20%;
+  width: auto;
+  margin-right: 5px;
+}
+
+.chosen-plan {
+  margin-left: 3%;
+}
+
+.yearly-plan h3 {
+  color: hsl(223, 47%, 23%);
+  margin: 0 auto;
+}
+
+.yearly-plan p {
+  margin: 0;
+}
+
+.yearly-plan a {
+  font-size: 0.8rem;
+  margin-left: auto;
+}
+
+.payment {
+  background-color: hsl(245, 75%, 52%);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 10px 8px 0px rgba(56,41,224,.2);
+  color: #FFF;
+  font-weight: 700;
+  font-size: 0.9rem;
+  outline: none;
+  padding: 5% 0;
+  width: 90%;
+}
+
+.cancel-order {
+  color: hsl(224, 23%, 55%);
+  font-weight: 900;
+  font-size: 0.8rem;
+  margin: 8% 0;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  .order-summary {
+    width: 45%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (min-width: 1024px) {
+  .App {
+    background-image: url('./images/pattern-background-desktop.svg');
+    background-position-y: -50%;
+  }
+
+  .order-summary {
+    width: 35%;
+  }
+
+  .order-summary h1 {
+    margin: 10% 0 0 0;
+  }
+
+  .order-summary p {
+    line-height: 1.5rem;
+  }
+
+  .yearly-plan {
+    height: 20%;
+    margin: 0 0 8% 0;
+    width: 70%;
+  }
+
+  .yearly-plan img {
+    height: auto;
+    width: 15%;
+  }
+
+  .payment {
+    width: 80%;
   }
 }
